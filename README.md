@@ -1,4 +1,4 @@
-﻿Simple-Placeholder
+﻿TestOCR
 ==================
 
 Depôt de test ocr

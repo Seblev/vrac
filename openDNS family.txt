@@ -1,0 +1,6 @@
+@ECHO OFF
+echo Apllication du filtrage ( DNS OpenDNS Familly)
+netsh interface ipv4 add dnsserver "Ethernet" address=208.67.222.123 index=1
+netsh interface ipv4 add dnsserver "Ethernet" address=208.67.220.123 index=1
+echo Le filtrage est maintenant actif.
+pause

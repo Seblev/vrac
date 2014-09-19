@@ -17,8 +17,11 @@ alt+inser
 #    Composer   #
 #################
 
-#Mettre à jour les paquets suivant composer.json
+#Mettre à jour les paquets avec composer.json
 composer update
+
+#Mettre à jour le paquet avec composer.json
+composer update NomDuPaquet
 
 #################
 #    Symfony    #

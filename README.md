@@ -1,4 +1,4 @@
 ﻿TestOCR
 ==================
 
-Depôt de test ocr
+Dépôt pour les tests ocr

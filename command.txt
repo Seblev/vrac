@@ -2,17 +2,18 @@
 #    NetBeans   #
 #################
 
-#Faire l'indentation auto
+#Faire l'indentation automatique
 maj + alt + f
 
-#Suggestion
+#Auto-complétion
 ctrl + espace
 
-#recherche expr pour supprimer les commentaires /** */ 
+#Expression régulière pour rechercher les commentaires /** */ 
 \/\*\*[^/]*\*\/
 
-#Ajouter les assesseurs et mutateurs
+#Ajouter les assesseurs et les mutateurs
 alt+inser
+
 #################
 #    Composer   #
 #################
@@ -24,20 +25,20 @@ composer update
 composer update NomDuPaquet
 
 #################
-#    Symfony    #
+#    Symfony2   #
 #################
 
-"Vider le cache symfony
+#Vider le cache symfony
 app/console cache:clear --env=prod --no-warmup
 
-#Pour mettre en prod (app.php) vider cache et ajouter les assetics
+#Pour mettre en prod (app.php) vider cache et lancer les assetics
 php app/console assetic:dump --env=prod --no-debug
 
 #################
 #      TWIG     #
 #################
 
-#Pour utiliser une url absolu
+#Pour utiliser une url absolue
 {{ app.request.basepath }}/img/foo.jpg
 
 #################
@@ -50,7 +51,7 @@ php app/console generate:doctrine:entity
 #Créer la bdd
 php app/console doctrine:database:create
 
-#Afficher les entités en SQL
+#Afficher la requête SQL pour créer les entités 
 php app/console doctrine:schema:update --dump-sql
 
 #Créer les entités dans la bdd
@@ -62,26 +63,27 @@ php app/console doctrine:generate:entities NipponjobAccueilBundle:Article
 #Insérer les jeux de données fictives dans la bdd
 php app/console doctrine:fixtures:load
 
-#Générer un form
+#Générer un formulaire
 php app/console generate:doctrine:form NipponjobAccueilBundle:Contact
 
 #Vérifier qu'il n'y a pas d'erreur pour passer en prod
 php app/console doctrine:ensure-production-settings --env=prod 
 
-#Liste entité
+#Lister les entités
 php app/console doctrine:mapping:info
 
 #################
 #    FOSUSER    #
 #################
 
+#Créer un utilisateur
 php app/console fos:user:create
 
 #################
 #       Git     #
 #################
 
-#Pour s'appropier les commit
+#Pour s'approprier les commits
 git config --global user.name "Your Name"
 git config --global user.email you@example.com
 
@@ -91,7 +93,7 @@ git status
 #Ajouter un fichier au prochain commit (obligatoire pour les nouveaux fichiers sinon commit -a suffit)
 git add nomdefichier
 
-#Envoi les modifications au dépot (-a pour ajouter les fichiers sinon il faut faire add de chaque fichier)
+#Envoiyer les modifications au dépot (-a pour ajouter les fichiers sinon il faut faire add de chaque fichier)
 git commit -a
 
 #Effacer un fichier/dossier (-r) du dépot mais pas du dossier
@@ -131,5 +133,6 @@ git stash drop
 
 # Si on utilise HTTPS
 https://github.com/user/repo2.git
+
 #Si on utilise SSH avec clef 
 git@github.com:user/repo2.git 

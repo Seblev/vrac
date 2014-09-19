@@ -1,0 +1,132 @@
+#################
+#    NetBeans   #
+#################
+
+#Faire l'indentation auto
+maj + alt + f
+
+#Suggestion
+ctrl + espace
+
+#recherche expr pour supprimer les commentaires /** */ 
+\/\*\*[^/]*\*\/
+
+#Ajouter les assesseurs et mutateurs
+alt+inser
+#################
+#    Composer   #
+#################
+
+#Mettre à jour les paquets suivant composer.json
+composer update
+
+#################
+#    Symfony    #
+#################
+
+"Vider le cache symfony
+app/console cache:clear --env=prod --no-warmup
+
+#Pour mettre en prod (app.php) vider cache et ajouter les assetics
+php app/console assetic:dump --env=prod --no-debug
+
+#################
+#      TWIG     #
+#################
+
+#Pour utiliser une url absolu
+{{ app.request.basepath }}/img/foo.jpg
+
+#################
+#    Doctrine   #
+#################
+
+#Pour créer les entités avec l'outil de doctrine
+php app/console generate:doctrine:entity
+
+#Créer la bdd
+php app/console doctrine:database:create
+
+#Afficher les entités en SQL
+php app/console doctrine:schema:update --dump-sql
+
+#Créer les entités dans la bdd
+php app/console doctrine:schema:update --force
+
+#Générer les accesseurs et mutateurs (si des column ont été ajouté)
+php app/console doctrine:generate:entities NipponjobAccueilBundle:Article
+
+#Insérer les jeux de données fictives dans la bdd
+php app/console doctrine:fixtures:load
+
+#Générer un form
+php app/console generate:doctrine:form NipponjobAccueilBundle:Contact
+
+#Vérifier qu'il n'y a pas d'erreur pour passer en prod
+php app/console doctrine:ensure-production-settings --env=prod 
+
+#Liste entité
+php app/console doctrine:mapping:info
+
+#################
+#    FOSUSER    #
+#################
+
+php app/console fos:user:create
+
+#################
+#       Git     #
+#################
+
+#Pour s'appropier les commit
+git config --global user.name "Your Name"
+git config --global user.email you@example.com
+
+#vérifier les différences par rapport au dernier commit
+git status 
+
+#Ajouter un fichier au prochain commit (obligatoire pour les nouveaux fichiers sinon commit -a suffit)
+git add nomdefichier
+
+#Envoi les modifications au dépot (-a pour ajouter les fichiers sinon il faut faire add de chaque fichier)
+git commit -a
+
+#Effacer un fichier/dossier (-r) du dépot mais pas du dossier
+git rm --cached monfichier
+
+#Annuler le dernier commit en conservant les modifications sur les fichiers
+git reset --soft HEAD^
+
+#Enlever les modifications sur les fichiers par rapport au dernier commit
+git reset --hard HEAD^
+
+# Créer une branche 
+git branch nomdebranche
+
+#Fusionner une branche
+git merge nomdebranche
+
+#Supprimer une branche
+git -d nomdebranche
+
+#changer de branch en deplaçant les modifications (en cas de travail sur une mauvaise branche)
+git stash
+git checkout nomdebranche
+
+#Applique puis supprime le dernier stash
+git stash pop
+
+#Applique le dernier stash
+git stash apply
+
+#Supprimer le dernier stash
+git stash drop
+
+#################
+#     Github    #
+#################
+
+# Si on utilise HTTPS
+https://github.com/user/repo2.git
+#Si on utilise SSH avec clef 
+git@github.com:user/repo2.git 
